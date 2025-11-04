@@ -5,9 +5,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>MySite</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* small inline CSS tweak for centered homepage */
+    .home-container {
+      text-align: center;
+      margin-top: 120px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+    .home-container h2 {
+      font-size: 2rem;
+      color: #00b37e;
+      margin-bottom: 15px;
+    }
+    .home-container p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-  <!-- Left sidebar -->
+  <!-- Sidebar -->
   <aside class="sidebar">
     <div class="brand">
       <img src="assets/cat.jpg" alt="My Cat" class="cat-photo">
@@ -21,24 +39,17 @@
     </nav>
   </aside>
 
-  <!-- Main content area -->
+  <!-- Main Content -->
   <main class="content">
-    <header class="page-header">
+    <div class="home-container">
       <h2>Welcome</h2>
-      <p class="muted">Minimal site with a left sidebar, dark-mode ready.</p>
-    </header>
-
-    <section>
-      <h3>About This Site</h3>
       <p>
-        Static HTML/CSS/JS, deployable on GitHub Pages. Use the sidebar to navigate
-        to <em>Lessons</em> (with Mathematics) and <em>Projects</em>.
+        My website for general purposes.<br>
+        This is a personal static website built with HTML, CSS, and JavaScript.<br>
+        It’s hosted on GitHub Pages and serves as a space for storing notes<br>
+        and small projects.
       </p>
-    </section>
-
-    <footer class="page-footer">
-      <p>MySite</p>
-    </footer>
+    </div>
   </main>
 
   <script src="js/nav.js"></script>

@@ -5,8 +5,26 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Projects • MySite</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .project-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .project-card h4 { margin-bottom: 6px; color: #00b37e; }
+    .project-meta { color: var(--muted); margin: 6px 0 10px 0; }
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    .btn.secondary {
+      background: #2a3134;
+      color: var(--text);
+    }
+    .btn.secondary:hover { background: #343c40; }
+  </style>
 </head>
 <body>
+  <!-- Sidebar -->
   <aside class="sidebar">
     <div class="brand">
       <img src="assets/cat.jpg" alt="My Cat" class="cat-photo">
@@ -15,33 +33,52 @@
     <nav id="nav" class="side-nav">
       <a href="index.html">Home</a>
       <a href="lessons.html">Lessons</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
     </nav>
   </aside>
 
+  <!-- Content -->
   <main class="content">
     <header class="page-header">
       <h2>Projects</h2>
-      <p class="muted">Personal and school projects.</p>
+      <p class="muted">Personal and academic projects.</p>
     </header>
 
-    <section>
+    <section class="card">
       <h3>My Projects</h3>
-      <ul class="project-list">
-        <li class="card">
-          <strong>Facial Recognition System</strong>
-          <p class="muted">Embedded Raspberry Pi project using Python, OpenCV, and LoRa modules.</p>
-        </li>
-        <li class="card">
-          <strong>Mini SAP Notes</strong>
-          <p class="muted">Local web app for math note-taking with LaTeX preview and offline storage.</p>
-        </li>
-      </ul>
-    </section>
 
-    <footer class="page-footer">
-      <p>MySite</p>
-    </footer>
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h4>Facial Recognition System</h4>
+        <div class="project-meta">
+          Embedded system using Raspberry Pi 3 B+, Python, OpenCV, Dlib, and the face_recognition library.
+        </div>
+        <p>
+          Implements dataset creation, model training, and live face recognition through a GUI (PySimpleGUI).
+          Features FPS display and automatic encoding storage for future identification.
+        </p>
+        <div class="btn-row">
+          <a class="btn" href="https://github.com/PhilipBambo/face-recognition" target="_blank" rel="noopener">📂 View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h4>Temperature & Humidity Sensor (LoRa / Arduino)</h4>
+        <div class="project-meta">
+          Wireless environmental monitoring system built with Arduino Uno, DHT11 sensor, and LoRa SX1278 modules.
+        </div>
+        <p>
+          The transmitter reads temperature and humidity data from the DHT11 sensor and sends packets
+          via LoRa 433 MHz. The receiver decodes and displays the data through the serial monitor.
+        </p>
+        <div class="btn-row">
+          <a class="btn" href="https://github.com/PhilipBambo/temperature-humidity-sensor-LoRa" target="_blank" rel="noopener">📂 View on GitHub</a>
+          <a class="btn secondary" href="assets/projects/lora-dht/README.pdf" target="_blank" rel="noopener">📄 Documentation</a>
+        </div>
+      </div>
+
+    </section>
   </main>
 
   <script src="js/nav.js"></script>
